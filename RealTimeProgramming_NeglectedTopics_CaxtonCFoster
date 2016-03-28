@@ -1,0 +1,10 @@
+Written By: Jared Fowler
+March 2016
+Read for fun while at Zebra Technologies
+A lot of this stuff I already know, but it helps to write it down to re-enforce my long-term memory and understanding of these topics.
+
+SINGLE INTERRUPTS
+-I-bit: Interrupts Inhibit flip-flop. Simple flip-flop which is set to ignore other interrupts, normally when another interrupt is being handled.
+-IRQVEC: A special space of memory in RAM, normally set up upon initialization.  When an interrupt occurrs, it has a pre-defined place to look for how to handle that interrupt in the IRQVEC (Interrupt Request Vector Table
+
+EDGE VERSUS LEVEL
