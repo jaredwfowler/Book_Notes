@@ -8,3 +8,18 @@ SINGLE INTERRUPTS
 -IRQVEC: A special space of memory in RAM, normally set up upon initialization.  When an interrupt occurrs, it has a pre-defined place to look for how to handle that interrupt in the IRQVEC (Interrupt Request Vector Table
 
 EDGE VERSUS LEVEL
+-Edge-Detecting-Line: Line gives off a "yelp" when the edge changes, either from 1 to 0 or 0 to 1. If no one is listenting, it is possible to miss it completely.
+-Level-Detecting-Line: Line acts more like a screaming child... it doesn't stop until someone pays attention to it. For this reason, IRQ's have to be of the Level-Detecting type.
+
+-NMI: non-maskable-interrupt. Pays no attention to the interrupt inhibit bit. Some systems use this as the "power-up" interrupt causing the computer to execute some execution on power-up. In such a system, the IVEC for this intterupt, NMIVEC, must be in ROM, not RAM.
+
+-Flip-Flops: There are several different types, but the commonality is that they all hold 1 bit of information, they normally all have 2 inputs and 2 outputs. The inputs determine whether to set or clear the bit. Output Q outputs the stored bit, and Q' is the compliment.
+  There are several variants, which seem to be deferred by if the input lines are held high, lo, etc. 
+  Generally in circuit schematics, when something is triggered at low, or is "active-low", it will have a circle drawn at point of connection.
+
+The book contains an exercise at this point which I found interesting. I didn't do it, but I did look over the schematic. 
+The problem was that we hade to wait for a physical action to occurr before we could proceed with the next portion of processing.
+Instead of having the IRQ directly dependent on a single Flip-Flop and the external object that set it off, they use 2 flip-flops.
+One to set the IRQ and then be turned off by the processor, and another to set that flip flop on the external object side.
+
+
