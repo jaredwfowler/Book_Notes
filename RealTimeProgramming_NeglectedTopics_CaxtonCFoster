@@ -18,7 +18,7 @@ EDGE VERSUS LEVEL
   Generally in circuit schematics, when something is triggered at low, or is "active-low", it will have a circle drawn at point of connection.
 
 The book contains an exercise at this point which I found interesting. I didn't do it, but I did look over the schematic. 
-The problem was that we hade to wait for a physical action to occurr before we could proceed with the next portion of processing.
+The problem was that we hade to wait for a physical action to occurr before we could proceed with the next portion of processing. In this case, a switch that was being toggled as a box went under it, and the switch wasn't released until the box made it past a certain point.
 Instead of having the IRQ directly dependent on a single Flip-Flop and the external object that set it off, they use 2 flip-flops.
 One to set the IRQ and then be turned off by the processor, and another to set that flip flop on the external object side.
 
