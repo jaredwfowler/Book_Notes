@@ -22,4 +22,10 @@ The problem was that we hade to wait for a physical action to occurr before we c
 Instead of having the IRQ directly dependent on a single Flip-Flop and the external object that set it off, they use 2 flip-flops.
 One to set the IRQ and then be turned off by the processor, and another to set that flip flop on the external object side.
 
+PORTS
+-Memory,CPU,I/O Devices. 
+  -Sometimes there are separate busses, one between the Memory and CPU, and another between the CPU and the I/O's. 
+  -Other times there is only one bus, where the memory and I/O devices are on the same bus.  
+  -"Modern" computing normally uses the second method, and uses something called memory mapping. 
+-Memory Mapping: I/O devices are assigned some location in main memory, which is reserved for that I/O. 
 
