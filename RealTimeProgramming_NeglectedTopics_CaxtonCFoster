@@ -29,3 +29,7 @@ PORTS
   -"Modern" computing normally uses the second method, and uses something called memory mapping. 
 -Memory Mapping: I/O devices are assigned some location in main memory, which is reserved for that I/O. 
 
+-Counters: Registers that are configured to start with a number and decrement that number on an event. Once zero is reached, an interrupt is triggered
+   -One-shot Timer: Normally 8-16 bits. On 8-bit machines the lo and hi bits are in separate addresses. Once zero is reached, the timer will not reset until the user clears the interrupt and tells it to reset.
+   -Repeater: Like a one-shot but has an additional 16bit buffer to the 16bit count register. This counter will automatically reset its countdown once it reaches zero and sends the interrupt. The value to automatically write to the count register is the value stored in the buffer.
+   -Event Counter: Like the one-shot, but instead of triggered by clock cycles is triggered by some external event line. Each time that line goes to zero we subtract one from the count. 
